@@ -1,4 +1,9 @@
-select emp1.Code, vac1.DateBegin, vac1.DateEnd,emp2.Code, vac2.DateBegin, vac2.DateEnd
+select emp1.Code as КодСотрудника1, 
+       vac1.DateBegin as НачалоОтпуска, 
+       vac1.DateEnd as КонецОтпуска,
+       emp2.Code as КодСотрудника1, 
+       vac2.DateBegin as НачалоОтпуска, 
+       vac2.DateEnd as КонецОтпуска
 
 from Vacation AS vac1
  
@@ -11,7 +16,7 @@ from Vacation AS vac1
  left join Employee AS emp2
     ON emp2.ID = vac2.ID_Employee
 
-where vac1.DateEnd between N'2020-01-01' and N'2020-12-31'
+where vac1.DateEnd between '2020-01-01' and '2020-12-31'
 
   
  
